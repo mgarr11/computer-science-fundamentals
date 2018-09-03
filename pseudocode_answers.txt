@@ -1,0 +1,60 @@
+
+Short Answer
+
+
+1. It allows them to create a rough and simple template for thier code and its desired outcomes.
+
+2. Pseudo code would not run on a computer, its an informal language. 
+
+
+Programming Assignment
+
+1. 
+
+FUNCTIION whichIsGreater (numberX, numberY)
+    IF numberX > numberY
+        PRINT numberX
+    ELSE 
+        PRINT numberY
+    END IF
+END FUNCTION        
+
+
+2. 
+
+FUNCTIION countToOneHundred()
+    FOR i=1 to 100 increment by 1
+        PRINT i
+    END FOR
+END FUNCTION
+
+
+3. 
+
+FUNCTIION findName (phonebook, name)
+    IF name.phonebook = 'name' THEN
+        PRINT "person found"
+    ELSE    
+        PRIN "person does not exist"
+    END IF
+END FUNCTIION
+
+4. 
+
+var phonebook = [
+  {name: 'joy'},
+  {name: 'matt'},
+  {name: 'abby'},
+  {name: 'mark'}
+]; 
+
+let findName = (phonebook, name) => {
+  for (i=0; i<phonebook.length; i++){
+    if ((phonebook[i].name) == name){
+      console.log('found')
+    }
+      console.log('person not found')
+  }
+};
+
+findName(phonebook, 'matt')
