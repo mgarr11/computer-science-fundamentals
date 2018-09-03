@@ -1,0 +1,134 @@
+1. 
+Clean code : code that is easy to read, has purpose that is easy to understand without running the code, and concise. 
+Clean code has functions that are simple and serve a single purpose. 
+Clean code is important to ensure that users can easily use the product, 
+other developers can clearly understand the purpose of the code, it is easy to debug, update, or modify. 
+Clean code is efficient. 
+
+2. 
+Amazons Alexa: Alexa if not properly coded could have a variety of bugs that would make use of the product unreliable.
+Alexa could order any recognizable item that was said aloud in your home. 
+Alexa could have poorly constructed voice command listeners and require the user to make very precise commands for a given output.
+Alexa might provide unreliable weather or traffic information due to poor geo-location or time update standards. 
+
+3. NO- poor naming conventions, requires extra documentation to convey purpose. 
+
+FUNCTION convertTemperature(temperature, measure)
+    IF measure = "F" THEN
+    SET converted to (temperature−32) * (5/9)
+    PRINT converted
+    ELSE IF measure ="C" THEN
+    SET converted to temperature * 1.8000 + 32.00 
+    PRINT converted 
+    END IF
+END FUNCTION
+
+4. NO but better than previous, logic utilized confusing double negative. 
+
+FUNCTION calcPercent(sum, total)
+ IF total = 0 THEN
+    PRINT "Sorry, cannot divide by 0"
+ ELSE
+    SET percentage to sum / total * 100
+    PRINT percentage
+ END IF    
+END FUNCTION
+
+5a. Reduced repetition for calculation of total making it a variable to stor that data rather than calculating each time.
+
+FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+   VARIABLE TOTAL = (subTotal * discountRate + (subTotal * tax))
+   PRINT "Your total due is: " + TOTAL
+
+   IF paymentType = 'CASH' THEN
+       CALL getPayment RETURNING amount
+       PRINT "Change due: " + amount - TOTAL
+   ELSE IF paymentType = 'CREDIT CARD' THEN
+       CALL getPayment RETURNING amount
+       PRINT "Your credit card has been charged: " + TOTAL
+   END IF
+END FUNCTION
+
+5b. 
+
+FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive && NOT guest.hasOverdueBooks && guest.outstandingFees = 0
+    APPEND book to guest.books
+    SET book.status to "Checked Out"
+    PRINT "Your books have been issued."
+
+ ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+
+5c. 
+
+CLASS BankTransactions
+
+    FUNCTION displayBalance
+        PRINT balance
+    END FUNCTION
+
+    FUNCTION deposit(amount)
+        SET balance to balance + amount
+    END FUNCTION
+
+    FUNCTION withdraw(amount)
+        IF balance > amount THEN
+        SET balance to balance - amount
+        END IF
+    END FUNCTION
+
+    FUNCTION creditCardOffer
+        IF NOT(customer.hasCreditCard) THEN
+            CALL offerCreditCard
+        END IF
+    END FUNCTION
+END CLASS    
+
+ 
+ CLASS checkingAccount
+    FUNCTION hasCheckingAccount
+        IF NOT(customer.hasCheckingAccount) THEN
+            CALL offerCheckingAccount
+        END IF
+    END FUNCTION
+END CLASS
+
+
+6. 
+
+function sumArray(array) {
+    let initialArray = array;
+    let sum = 0;
+    for (i=0; i<initialArray.length; i++){
+        sum += initialArray[i];
+    }
+    return sum;
+}
+
+function isPerfectSqure(array){
+    let referenceNumber = sumArray(array);
+
+    if(referenceNumber > 0 && Math.sqrt(referenceNumber) % 1 ===0){
+        console.log("The sum of this array is a perfect squre");
+    else 
+        console.log("The sum of this array is not a perfect squre");
+    }
+}
+
+7. 
+
+
+function checkDuplicates(array) {
+    var valuesSoFar = [];
+    for (var i = 0; i < array.length; ++i) {
+        var value = array[i];
+        if (valuesSoFar.indexOf(value) !== -1) {
+            return true;
+        }
+        valuesSoFar.push(value);
+    }
+    return false;
+}
