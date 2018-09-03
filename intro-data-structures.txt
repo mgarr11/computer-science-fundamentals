@@ -1,0 +1,72 @@
+1a. 
+
+var people = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+1b. 
+
+function addPerson (array, person){
+  var moreOrLessPeople = array;
+  array.push(person);
+  console.log (moreOrLessPeople)
+}
+addPerson(people, 'Mary')
+
+
+1c. 
+
+function findPositionInLine (array, person) {
+  console.log(array.indexOf(person));
+}
+
+findPositionInLine(people,'Josh');
+
+1d. 
+
+function findPerson (array, person) {
+
+  if (array.includes(person)){
+
+      console.log('position in line is: ' + array.indexOf(person));
+  }else
+      console.log ('not in line')
+
+}
+
+findPerson(people, 'Josh');
+
+1e. 
+
+var people = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+
+function breakLine (array, personInLine, cutter) {
+  
+  newArr = array.splice(array.indexOf(personInLine));
+  array.push(cutter)
+  var newLine = array.concat(newArr)
+  console.log(newLine)
+}
+
+breakLine(people, 'Josh', 'Macy');
+
+1f.
+
+function getOutOfLine (array,person){
+  var index = array.indexOf(person);
+  if (index > -1) {
+    array.splice(index, 1);
+  }
+  console.log(array);
+}
+
+getOutOfLine(people, 'Josh')
+
+2. 
+
+Items in a grocery store inventory
+
+3. 
+
+In the case of an inventory tracking system, developers might be able to search for a given item by name, and access its specific inventory.
+This could be done through a simple function that accepts an array, object, or array of objects and can search for the item of interest. 
+From there the developer could access the information need on that particular item and generate a print. 
