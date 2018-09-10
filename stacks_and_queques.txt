@@ -1,0 +1,90 @@
+EXERCISES
+
+1. A stack operates on the LIFO principle, where a queque operates on the
+FIFO principle. A stack can take advantage of the push and pop methods. 
+
+2. Both stacks and queques are a way of taking data input and prioritizing its
+output, one handles the last input first, where the other handles the first input
+first.
+
+3. For an UNDO function a stack or LIFO would be best as this would redact
+the most recent input. 
+
+
+PROGRAMMING QUESTIONS
+
+1.
+
+var word = 'String'
+
+
+let stack = (string) =>{
+  var temp = [];
+  var reverse = "";
+
+  for (i=0; i<string.length; i++){
+    temp.unshift(string[i]);
+    
+  }
+  
+  console.log(temp)
+  reverse += temp.join('');
+  console.log(reverse)
+}
+
+stack(word);
+
+
+
+2. 
+
+var word = 'String'
+
+
+let stack = (string) =>{
+  var temp = [];
+
+  for (i=0; i<string.length; i++){
+    temp.push(string[i]);
+  }
+  console.log(temp)
+  
+  var reverse = "";
+  for (i=temp.length-1; i>=0 ; i--){
+   reverse += temp.pop();    
+  }
+
+
+  console.log(reverse)
+}
+
+stack(word);
+
+
+3. 
+
+var word = 'String'
+
+
+function enque (string){
+  temp = [];
+  
+
+  for (i=0; i<string.length; i++){
+    temp.unshift(string[i]); 
+  }
+   console.log(temp)
+}
+
+function deque (enque){
+
+   for (i=temp.length-1; i>=0 ; i--){
+   console.log(temp.pop([i]));    
+  }
+
+}
+
+
+deque(enque(word));
+
+
