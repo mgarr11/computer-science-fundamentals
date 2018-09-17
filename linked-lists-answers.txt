@@ -1,0 +1,169 @@
+Written Questions
+
+1. Arrays although easier to navigate, and create can take a considerable ammount of space. 
+Linked lised on the other hand can occupy the same ammount of space but spread across dirrerent
+areas, requiring less re-arranging of the physical space. However linked lists can be difficult 
+to navigate as they are 'scanned' front to back to find the given item needed, this can make 
+finding information in a linked list more challengin. 
+
+2. One real-world example of a linked list might be the forward and backward functionality of 
+a web browser history. 
+
+
+Programming Questions
+
+1.   The original implementation will only creat the first and last node
+input. The first input will be placed to the head, the next node will be 
+the next input, each iteration after this will result in the head.next to 
+replaced by the next input until the last input offered, resulting in a 2
+item linked list. 
+
+class LinkedList {
+    constructor(value) {
+        this.head = null;
+        }
+        
+  insertNodeAtTail(val) {
+    var node = {
+      data: val,
+      next: null
+    };
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      var current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+  }
+
+}
+
+var L1 = new LinkedList();
+
+var testData = [5,6,7,8,9,10];
+
+testData.forEach(el => L1.insertNodeAtTail(el));
+
+
+2. 
+
+class LinkedList {
+    constructor(value) {
+        this.head = null;
+        //this.length = 0;
+        //this.addToHead(value);
+        }
+        
+  insertNodeAtTail(val) {
+    var node = {
+      data: val,
+      next: null
+    };
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      var current = this.head;
+      while(current.next){
+        current=current.next;
+      }
+      current.next = node;
+    }
+  }
+  
+  removeDuplicates(val){
+    if(!this.head || !this.head.next){
+        console.log('empty or single item list');
+        return;
+    }
+    var current;
+    var next;
+    var nodes = {};
+
+    current = this.head;
+    next = current.next;
+    nodes[current.data] = true;
+
+    while (next){
+        var data = next.data;
+        if(nodes[data]){
+            current.next = next.next;
+        } else {
+            nodes[data]=true;
+            current=next;
+        }
+        next=next.next
+        }
+    }
+
+}
+
+var L1 = new LinkedList();
+var testData = [5,6,7,8,9,10,10,9,7,13];
+
+testData.forEach(el => L1.insertNodeAtTail(el));
+L1.removeDuplicates();
+
+
+
+3. 
+
+class LinkedList {
+    constructor(value) {
+        this.head = null;
+        //this.length = 0;
+        //this.addToHead(value);
+        }
+        
+  insertNodeAtTail(val) {
+    var node = {
+      data: val,
+      next: null
+    };
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      var current = this.head;
+      while(current.next){
+        current=current.next;
+      }
+      current.next = node;
+    }
+  }
+  
+  reverseLinkedList(val) {
+    if(!this.head || !this.head.next){
+        console.log('empty list or list with one element')
+        return;
+    }
+    var prev = null;
+    var current = this.head;
+    var next;
+
+    while (current){
+        next=current.next;
+        crrent.next = prev;
+        prev=current;
+        current=next;
+    }
+
+    this.head = prev;
+
+  }
+
+}
+
+var L1 = new LinkedList();
+var testData = [5,6,7,8,9,10,10,9,7,13];
+
+testData.forEach(el => L1.insertNodeAtTail(el));
+L1.reverseLinkedList();
+
+
+
+
