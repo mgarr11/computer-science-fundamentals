@@ -8,7 +8,11 @@ output, one handles the last input first, where the other handles the first inpu
 first.
 
 3. For an UNDO function a stack or LIFO would be best as this would redact
-the most recent input. 
+the most recent input. Similarly a stack or LIFO would work for a re-do function. 
+Consider the stack of plates being washed in a cafeteria line, the last plate washed is the first to go out, 
+then the next most recent, but the orders on the plates were wrong and the customers move
+backward (REDO) in line to have their order fixed. In the Microsoft word example the 
+first UNDO will be the last to be REDONE and the last or most recent UNDO will be the first REDO.
 
 
 PROGRAMMING QUESTIONS
