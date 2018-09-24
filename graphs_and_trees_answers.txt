@@ -1,0 +1,35 @@
+What is a binary tree and what makes it unique to other trees?
+
+A binary tree has two child nodes beneath the root, each node beneath those can also have
+two nodes. It always has one node that branches into two (binary) nodes. Other trees may 
+differ in the number of nodes they have or how they oganize data. 
+
+What is a heuristic?
+
+A heuristic is basically a guess that an algorithm makes to solve a problem faster, but does so 
+with less accuracy. 
+
+What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+Finding a number in a list of numbers. Say numbers 0-100 are listed out, you could guess that
+the number of interest is greater than 50 but less than 100 and search only 50 numbers, 
+and progressively narrow the search by 50%. However this may not be accurate it is fast. 
+
+What is the difference between a depth-first search and a breadth-first search?
+
+The differnece is how the search passes through data. Depth of field searching is like looking down 
+a column of data, if the data of interest is not there, move to the next column. Though not litteraly 
+a colum, it searches the right or left most path and progressively works across the graph vertically. 
+A breadth serach is like searching along rows, it looks at the first order of nodes, then the next order
+and so on searching across the entire tree. 
+
+Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+This could be a doubly linked list which traversing nodes could go in one or two directions, but have 
+terminal ends that do not link back to the start. Each node passed has no infomation about the complexity 
+of navigating further or returning. Or like a two way street(undirected) from point to point(a-cyclic) 
+with speed limit and traffic lights (weight). 
+
+What kind of graph is a binary search tree?
+
+Directed, a-cyclic, unweighted. 
