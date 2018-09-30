@@ -125,4 +125,4 @@ console.log(newSearchTree)
 
 console.log(newSearchTree.isPresent(60));
 
-console.log(newSearchTree.findDistance(newSearchTree.root, 4, 14));
+console.log(newSearchTree.findDistance(newSearchTree.root, 3, 14));
