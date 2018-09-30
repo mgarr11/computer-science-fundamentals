@@ -1,0 +1,62 @@
+1. 
+
+    -Making Coffee;
+    FOR each cup of coffee to make
+        Set brewed coffee to 0
+        Set max coffee grounds to 10
+        Set max water to 40
+        ADD 1tbsp coffee grounds
+            increment coffee grounds
+        ADD 4oz water
+            increment water
+        For each ADD coffee grounds and ADD water
+            increment coffee to 1
+        END FOR
+        IF coffee not breweing
+            Set timer to 0
+            Set machine on
+            WHILE on wait 8min
+            increment time 
+            Set machine warm
+        ELSE IF coffee brewing done
+            Pour coffee in cup
+        ELSE
+            Set machine OFF
+        END IF
+    END FOR
+
+    -Washing dishes;
+
+    Set count = dirty dishes
+    IF count  = 0 
+        watch TV
+    ELSE 
+        wash dish
+            decrement count 1
+    END IF     
+        
+
+    - Bigger of two numbers
+
+    FUNCTION PrintBiggerOfTwo
+        evaluate x
+        evaluate y
+        If x>y then
+            Print x
+            ELSE print y
+        END IF
+    END FUNCTION
+
+
+2. 
+    1. Not a company but Hospitals: Targeted Real-Time Early Warning System(TREW score) is an 
+    algorithm  developed to detect septic shock up to 24 hours earlier based on information
+    compiled in medical records of admitted patients. 
+    2. Netflix- recommendation algorithm- updates material based upon watch history. 
+    3. Fictional example from the TV series Silicon Valley: Pied Pipers' "middle-out" algorithm
+    used as a lossless compression algorithim for video compression. 
+
+
+3.  
+    An efficient algorithim would have few nested loops, simple logic and patterns, would be easy to
+    maintain. 
