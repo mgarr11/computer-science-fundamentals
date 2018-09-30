@@ -1,0 +1,38 @@
+1. What is time complexity and what is its relation to algorithms?
+    it is an estimate of the time it will take for a program or function to run
+    relative to the number of steps required for full execution. 
+
+2. What is runtime?
+    Can be considered the actual duration of time from start to finish but is 
+    synonomus with time complexity
+
+3. How is the runtime of an algorithm calculated?
+    Add up all the instructions in the algorithm as a function of the size of the input
+    then simplify the expression to the largest term eliminating all of the constants. 
+    Write complexity as 'O(n)'
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them 
+in order of most efficient to least efficient. 
+Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+    1. constant O(1)
+    2. Logarithmic O(log(n))
+    3. linear O(n)
+    4. Log-linear O(n log n)
+    5. Quadratic O(n^2)
+    6. Exponental O(2^n)
+    7. Factorial O(n!)
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+    Linear - mowing the grass, the time to mow the grass (excluding type of mower and height/type of grass) 
+    the larger the lawn the longer it will take to mow the yard. 
+
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+    O(n) 
+
+7. 
+    O(n^2)
+
+8. 
+    O(2^n)
+
+9. The first snippet as a linear O(n)
