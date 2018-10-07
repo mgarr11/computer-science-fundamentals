@@ -1,0 +1,61 @@
+1. Recursion is a process or function that utilizes base cases to help define stop
+points for the function and calls itself repeatedly until a base case is met. Iteration
+on the other hand does not call itself (the function) rather, it uses loops to repeat 
+a process. Both can achieve the same result, but one may be more performant than the 
+the other depending on the nature of the problem at hand. 
+
+2. Factorials, Greatest Common Divsor, Fibonacci Sequence, binary search, Reverse a string
+
+3. A good use case of recursion is when base cases are known, or for calculations requiring 
+reuse of a particular piece of data. Howver it may be be more beneficial to use a iterative 
+algorithm when filtering or sorting through a linear data structure or perhaps when built in 
+methods are known. 
+
+4. The factorial functions differ in that the recursive method continues to return the result 
+passing the calculated number from each phase back into the function, if the calculated number 
+passed back into the function meets one of the base cases it stops. The iterative  method
+is similar in that it establishes a base case for values <0 but utilizes a loop to  handle 
+values down to 2, the loop allows the function to make a calculation in a serial by decrementing
+the value of of the number by 1 each time and multiplying that new number by the stored result. 
+    Key difference: recall function for each new value, vs looping through the values. 
+The maxium functions differ in that the recursive method cycles through all of the numbers storing 
+the maxium from the first pass, then passes back through going backwards looking for a number bigger 
+than the first. As a recursive method the function is called each time. The iterative method
+uses a loop and stores the maxium only replacing it if it encounters a number large than the originally 
+stored number. This is different in the use of a loop and it also establishes the first number of the 
+list as the largest ie the start point. 
+
+5. 
+
+function counter (data){
+    if (data.length < 1){
+        return error
+    }
+    else if (data.length =1){
+        return 1
+    }else {
+        return 1+ counter(data.slice(1))
+    }
+}
+
+console.log(counter([1,2,3,4,5,6]));
+
+6. 
+
+function isPalindrome (str){
+    str = str.toLowerCase();
+    if(str.length === 1){
+        return true;
+    }else if(str[0] != str[str.length -1]){
+        return false;
+    }else {
+        return isPalindrome(str.slice(1,-1))
+    }
+}
+
+console.log(isPalindrome('motor'));
+console.log(isPalindrome('rotor'));
+
+7. The google search exhibits recursion in that search attempts to call itself again by way 
+of prompting you to click the 'did you mean: recursion'. If you click the link it calls the 
+search function again. 
