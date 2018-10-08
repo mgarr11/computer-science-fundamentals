@@ -1,0 +1,78 @@
+1. Searching for an open parkin spot at the grocery store. 
+
+2. Searching for your departing flight on the depatures board at the airport. 
+
+3. 6
+
+4. 4
+
+5. Using a linear search in this case would be best practice, although the data set is huge
+a binary search would be unrelaible due to the unsorted nature of the data. 
+
+6. A binary search would be best practice for a sorted collection this would allow you to 
+immediately eliminate 50% of the data. This practice may take 1/2 the time of a linear search. 
+
+7. function findWord(dictionary, str){
+    let low = dictionary 0;
+    let high = dictionary.length-1;
+
+    while (low <= high) {
+        let mid = ((low + high) / 2);
+        if (dictionary[mid]>str){
+            high = mid -1;
+        }
+        else if(dictionary[mid] < str ){
+            low = mid +1
+        }else {
+            return mid
+        }
+        return not found; 
+    } 
+    
+}
+
+var dictonary = ['able', 'dog', 'albatross', 'bird', 'cat', 'typhoon', 'anaconda']
+var sortedDictonary = dictionary.sort();
+console.log(findWod(sortedDictionary, 'albatross'));
+
+8. 
+
+function getFishBinary(fishInTank, fishWanted){
+    let fishInTankSorted = fishInTank.sort();
+    let low = 0;
+    let high = fishInTankSorted.length-1;
+
+    while (low <= high) {
+        let mid = ((low + high) / 2);
+        if (fishInTankSorted[mid]>fishWanted){
+            high = mid -1;
+        }
+        else if(fishInTankSorted[mid] < fishWanted ){
+            low = mid +1
+        }else {
+            console.log(fishWanted + ' found')
+            return mid
+        }
+        return 'not found'; 
+    } 
+}
+
+//or linear search
+
+function getFishLinear(fishInTank, fishWanted){
+  var result = null, value;
+  for (i=0; i<fishInTank.length; i++){
+      value = fishInTank[i];
+      if (value === fishWanted){
+          result = i;
+        console.log('fish found')
+      }
+    
+  } 
+  return result;  
+}
+
+var fishTank = ['blue', 'blue', 'blue', 'white', 'blue', 'red', 'brown', 'brown']
+
+console.log(getFishLinear(fishTank, 'white'));
+console.log(getFishBinary(fishTank, 'white'));
