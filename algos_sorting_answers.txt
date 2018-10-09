@@ -1,0 +1,59 @@
+1. Bubble sort
+
+ FUNCTION bubbleSort(collection)
+   REPEAT
+     SET swapped to false
+     FOR i = FIRST INDEX of collection to LAST INDEX of collection - 1
+       IF collection[i] > collection[i + 1] THEN
+         SET tmp to collection[i]
+         SET collection[i] to collection[i + 1]
+         SET collection[i + 1] to tmp
+         SET swapped to true
+       END IF
+     END FOR
+   UNTIL swapped is FALSE
+
+   RETURN collection
+ END FUNCTION
+
+2. Quicksort
+
+FUNCTION quickSort(array)
+    INIT less to empty array
+    INIT equal to empty array
+    INIT greater to empty array 
+
+    IF arraylength <= 1 THEN
+     RETURN collection
+    ELSE 
+        SET pivot to any item of array
+        FOR each element in array 
+            IF element < pivot then 
+                append to less
+            ELSE IF element > pivot then
+                append to gteater
+            ELSE 
+                append to equal
+            END IF
+        quickSort(less)
+        quickSort(gteater)
+        END FOR
+    END IF
+    RETURN array = concatenate (less, equal, greater)
+
+END FUNCTION
+
+3. First off, quick sort and merge sort tend to fair better in terms of time complexity with an 
+average complexity of O(log n), and worst of O(n^2), where buttle sort and insertion sort tend to 
+average O(n^2). The large benefit of merge and quick sort come from breaking the sorting task into 
+smaller components with improving efficiency as the process continues. Bubble sort and selection sort 
+have to evaluate 2 items at a time, switching one at a time, this causes the algorithm to iterate
+through the data multiple times. 
+
+4. Bucket sort takes an array of values, and distributes the values of the array into a number of 
+buckets proportional to the range of the array. For example if the array contained whole numbers 
+with values from 1-100 the buckets could be made out to be range values of 10, to create 10 buckets. 
+Each of theses buckets are then individually sorted, then recombined into an array. The sorting of individual 
+buckets allows the algorithm to break the problem into small pieces and quickly find order with a few 
+pieces of data (ie. <10) as opposed to many (ie. 100+). Bubble sort is most useful when sorting
+a uniform distribution of values. 
